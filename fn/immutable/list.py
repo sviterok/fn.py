@@ -134,7 +134,7 @@ class Queue(object):
             yield el
 
     def __nonzero__(self):
-        return len(self)
+        return True if len(self) else False
 
     def __bool__(self):
         return self.__nonzero__()
