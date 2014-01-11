@@ -84,7 +84,7 @@ class Queue(object):
 
     Implementation based on two linked lists (left and right). Enqueue operation
     performs cons on right list (the end of the queue). Dequeue peeks first element
-    from the left list (when possible), if left list is emptpy we populate left list
+    from the left list (when possible), if left list is empty we populate left list
     with element from right one-by-one (in natural reverse order). Complexity of both
     operations are O(1).
 
@@ -113,7 +113,7 @@ class Queue(object):
 
     def dequeue(self):
         """Return pair of values: the item from the front of the queue and
-        the new queue object without poped element.
+        the new queue object without popped element.
         """
         if not self: raise ValueError("Queue is empty")
         # if there is at least one element on the left, we can return it
